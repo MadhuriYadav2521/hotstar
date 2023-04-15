@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-section{
+    width: 100%;
+}
+.login-container{
+    width: 50%;
+    margin: 4rem auto;
+    border: 1px solid salmon;
+    display: flex;
+    justify-content: space-between;
+}
+.login-left{
+    width: 50%;
+    border: 1px solid white;
+}
+.login-right{
+    width: 50%;
+    border: 1px solid white;
+}
