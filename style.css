@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 .screen {
     width: 100%;
@@ -54,7 +57,7 @@
 .login-close {
     width: 100%;
     text-align: right;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: .5rem; */
     cursor: pointer;
 }
 
@@ -75,14 +78,30 @@
     margin-bottom: 1.5rem;
 
 }
-
-div.input-block {
+.login-submit{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.login-submit input{
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    padding: .9rem .5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #4888f7 0%, #062b9b 100%), radial-gradient(circle at top left, #305ac2, #061f6d);
+}
+.login-inputs .input-block {
     position: relative;
 }
 
-div.input-block input {
+.login-inputs div.input-block input {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #495055;
     width: 100%;
     padding: .7rem .5rem;
@@ -92,7 +111,7 @@ div.input-block input {
     background-color: #16181f;
 }
 
-div.input-block span.placeholder {
+.login-inputs div.input-block span.placeholder {
     position: absolute;
     /* margin: 1rem 0 1.5rem 0; */
     margin-top: .7rem;
@@ -101,7 +120,7 @@ div.input-block span.placeholder {
     color: #6c757d;
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     top: 0;
     left: 1.7rem;
     transition: all 0.2s;
@@ -110,18 +129,18 @@ div.input-block span.placeholder {
     pointer-events: none;
 }
 
-div.input-block input:valid+span.placeholder,
-div.input-block input:focus+span.placeholder {
+.login-inputs div.input-block input:valid+span.placeholder,
+.login-inputs div.input-block input:focus+span.placeholder {
     transform: scale(0.8) translateY(-1.5rem);
     background: #16181f;
 }
 
-div.input-block input:focus {
+.login-inputs div.input-block input:focus {
     color: white;
     border-color: gray;
 }
 
-div.input-block input:focus+span.placeholder {
+.login-inputs div.input-block input:focus+span.placeholder {
     color: gray;
 }
 
@@ -142,3 +161,204 @@ div.input-block input:focus+span.placeholder {
     cursor: pointer;
     text-transform: capitalize;
 }
+.home-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #16181f;
+
+}
+.nav-wrapper{
+    width: 9%;
+    border: 1px solid salmon;
+    height: 40rem;
+    background-color: #16181f;
+    display: flex;
+    flex-direction: column;
+}
+.main-content{
+    width: 91%;
+    border: 1px solid black;
+    height: 40rem;
+}
+.logo-and-subscribe{
+    width: 80%;
+    margin:  1rem auto;
+    /* border: 1px solid salmon; */
+}
+.logo{
+    width: 60%;
+    margin: auto;
+}
+.logo img{
+    width: 100%;
+}
+.home-subscribe{
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    padding: .3rem;
+    background-color: rgba(236, 214, 173, 0.242);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: .4rem;
+}
+.home-subscribe a{
+    font-size: .8rem;
+    color: rgb(249, 206, 125);
+    text-transform: capitalize;
+
+}
+.home-subscribe i{
+    font-size: .9rem;
+    color: rgb(249, 206, 125);
+}
+.nav-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link{
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+.nav-link i{
+    color: gray;
+    font-size: 1rem;
+    
+}
+.nav-link:hover i{
+    color: white;
+    font-size: 1rem;
+    
+}
+.subscribe-section{
+    width: 98%;
+    margin: 1rem auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.sub-img{
+    width: 49%;
+    border: 1px solid salmon;
+}
+.sub-img img{
+    width: 100%;
+}
+.subscribe-wrapper{
+    width: 49%;
+    border: 1px solid salmon;
+    padding: 2rem 0;
+}
+.subscribe-header{
+    width: 100%;
+    border: 1px solid violet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-header-img{
+    width: 9%;
+}
+.sub-header-img img{
+    width: 100%;
+}
+.subscribe-header-content{
+    width: 90%;
+    
+}
+.subscribe-content input{
+    color: gray;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    padding: .7rem;
+    border: none;
+    border-radius: .8rem;
+    margin-top: 3rem;
+
+}
+.subscribe-header-content h4{
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: .8rem;
+}
+.subscribe-header-content p{
+    color: gray;
+    font-size: .8rem;
+}
+.subscribe-content{
+    width: 70%;
+}
+.subscribe-content h5{
+    margin-top: 1rem;
+    color: white;
+    letter-spacing: .04rem;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
