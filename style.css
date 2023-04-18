@@ -477,26 +477,151 @@ a{
     width: 100%;
 }
 
+/* ---category---- */
 
+.category-section{
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid black;
+    margin-left: 9%;
+    border: 1px solid salmon;
+}
+.category{
+    width: 100%;
+    position: relative;
+}
+.category-title{
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: white;
+}
+.slide-container{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    margin: 0  auto 0 3rem;
+    padding-left: 1rem;
+}
+.slide-container::-webkit-scrollbar{
+    display: none;
+}
+.slide{
+    position: relative;
+    width: 20rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    transition: .5s;
+}
+.slide:hover{
+    transform: scale(1.1);
+}
+.slide:hover .slide-content{
+    opacity: 1;
+}
+.slide img{
+    width: 100%;
+    object-fit: cover;
+}
+.slide-content{
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top:  6rem;
+    transition: .5s;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 98%);
+    opacity: 0;
+}
+.c-watch-now-btn{
+    width: 100%;
+    margin: .5rem 0;
+    background-color: #fff;
+    padding: .7rem;
+    /* position: absolute; */
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+/* .c-watch-now-btn span:nth-child(1) i{
+    color: black;
+    margin-right: .5rem;
+    font-size: 1.6rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.c-watch-now-btn span:nth-child(2){
+    color: black;
+    font-size: 1.6rem;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+} */
+.short-info{
+    width: 100%;
+    margin: .5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    /* gap: 1rem; */
+}
+.short-info span{
+    width: auto;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: white;
+    margin-right: .2rem;
+}
+.short-info .dot{
+    font-size: 1.3rem;
+    text-align: center;
+}
+.c-desc{
+    width: 100%;
+    margin-top: .5rem;
+}
+.c-desc p{
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.back-btn, .next-btn{
+    width: 5%;
+    z-index: 2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    background-color: transparent;
+}
+.back-btn{
+    left: 0;
+}
+.next-btn{
+    right: 0;
+}
+.back-btn i{
+    font-size: 1.4rem;
+    color: black;
+    margin-top: 12rem;
+}
+.next-btn i{
+    font-size: 1.4rem;
+    color: black;
+    margin-top: 12rem;
+}
 
 
 
