@@ -480,15 +480,20 @@ a{
 /* ---category---- */
 
 .category-section{
-    width: 90%;
+    width: 91%;
     margin: 1rem auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 9%;
     border: 1px solid salmon;
+}
+.latest-and-trending{
+    width: 100%;
 }
 .category{
     width: 100%;
     position: relative;
+    height: 28rem;
+    margin: 1rem 0 2rem;
 }
 .category-title{
     width: 100%;
@@ -499,14 +504,16 @@ a{
     color: white;
 }
 .slide-container{
-    width: 95%;
+    width: 98%;
+    height: 26rem;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     position: absolute;
-    overflow-x: auto;
+    overflow-x:auto;
     overflow-y: visible;
     scroll-behavior: smooth;
-    margin: 0  auto 0 3rem;
+    margin: 0  auto 0 1rem;
     padding-left: 1rem;
 }
 .slide-container::-webkit-scrollbar{
@@ -515,9 +522,11 @@ a{
 .slide{
     position: relative;
     width: 20rem;
-    border: 1px solid white;
+    min-width: 20rem;
+    height: 26rem;
+    /* border: 1px solid white; */
     border-radius: .5rem;
-    margin-right: 1rem;
+    margin-right: 1.6rem;
     transition: .5s;
 }
 .slide:hover{
@@ -528,6 +537,7 @@ a{
 }
 .slide img{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 .slide-content{
@@ -536,7 +546,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    margin-top:  6rem;
+    margin-top:  12rem;
     transition: .5s;
     z-index: 2;
     background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 98%);
@@ -555,21 +565,6 @@ a{
     font-size: 1.4rem;
     text-transform: capitalize;
 }
-/* .c-watch-now-btn span:nth-child(1) i{
-    color: black;
-    margin-right: .5rem;
-    font-size: 1.6rem;
-
-}
-.c-watch-now-btn span:nth-child(2){
-    color: black;
-    font-size: 1.6rem;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    text-transform: capitalize;
-    font-weight: 600;
-} */
 .short-info{
     width: 100%;
     margin: .5rem 0 0 0;
@@ -597,42 +592,251 @@ a{
     font-size: 1.2rem;
     line-height: 1.5rem;
 }
-.back-btn, .next-btn{
-    width: 5%;
-    z-index: 2;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.back-btn {
     position: absolute;
-    background-color: transparent;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 3;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
 }
-.back-btn{
+
+
+.next-btn {
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    z-index: 3;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+
+}
+
+
+.back-btn {
     left: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+    color: white;
+
 }
-.next-btn{
+
+.next-btn {
     right: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+    color: white;
 }
-.back-btn i{
+
+.back-btn i,
+.next-btn i {
+    width: 1.5rem;
+    height: 2rem;
+    opacity: 0;
+}
+
+.back-btn:hover i,
+.next-btn:hover i {
+    opacity: 1;
+}
+.popular-shows{
+    width: 100%;
+}
+.recommanded-movies{
+    width: 100%;
+}
+.popular-gener{
+    width: 100%;
+}
+.popular-gener .category{
+    height: 18rem;
+    /* border: 1px solid salmon; */
+}
+.popular-gener .slide-container{
+    height:18rem;
+}
+.popular-gener .slide{
+    min-width: 20%;
+    width: 20%;
+    height: 15rem;
+
+}
+.popular-gener .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popular-languages{
+    width: 100%;
+}
+.popular-languages .category{
+    height: 18rem;
+    /* border: 1px solid salmon; */
+}
+.popular-languages .slide-container{
+    height:18rem;
+}
+.popular-languages .slide{
+    min-width: 20%;
+    width: 20%;
+    height: 15rem;
+
+}
+.popular-languages .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* -------footer----- */
+
+.footer {
+    width: 91%;
+    margin: 1rem auto;
+    /* border: 1px solid black; */
+    margin-left: 9%;
+    /* border: 1px solid salmon; */
+    padding: 2rem 3rem 3rem 0;
+}
+
+.first-footer {
+    display: flex;
+    justify-content: space-between;
+    /* border: .2rem solid red; */
+}
+
+.footer-menus {
+    width: 23%;
+    /* border: .1rem solid yellow; */
+}
+
+.connect-w-us {
+    width: 23%;
+    /* border: .1rem solid yellow; */
+
+}
+
+.footer-menus-lang {
+    width: 23%;
+    /* border: .1rem solid yellow; */
+}
+
+.footer-menus-lang>a {
+    color: #8F98B2;
     font-size: 1.4rem;
-    color: black;
-    margin-top: 12rem;
+    text-decoration: none;
+    text-transform: capitalize;
 }
-.next-btn i{
+
+.footer-link-head {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.company-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-links>a {
+    color: #8F98B2;
     font-size: 1.4rem;
-    color: black;
-    margin-top: 12rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+
 }
 
+.h-help {
+    display: flex;
+    flex-direction: column;
+}
 
+.h-help>a {
+    color: #8F98B2;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+}
 
+.footer-icons {
+    display: flex;
+    justify-content: left;
+    gap: 3rem;
+    padding-top: 1rem;
+    align-items: center;
+}
 
+.footer-icons>a {
+    color: white;
+    font-size: 1.6rem;
+}
 
+.second-footer {
+    width: 100%;
+    /* border: .1rem solid orange; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
 
+.t-conditions {
+    width: 65%;
+    /* border: .1rem solid blue; */
+    display: flex;
+    flex-direction: column;
+}
 
+.app-images-container {
+    width: 35%;
+    /* border: .1rem solid blue; */
+    display: flex;
+    gap: 3rem;
+    justify-content: right;
+}
 
+.t-conditions>span {
+    color: #8F98B2;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+}
 
+.t-conditions>span>a {
+    color: #8F98B2;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: .6rem;
+    margin-right: 1.4rem;
+}
 
+.playstore-img {
+    width: 30%;
+}
 
+.playstore-img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.appstore-img {
+    width: 30%;
+}
+.appstore-img>img{
+    width: 100%;
+    height: 100%;
+}
 
 
 
