@@ -173,18 +173,21 @@ a{
 }
 .nav-wrapper{
     width: 9%;
-    border: 1px solid salmon;
+    height: 80%;
+    /* border: 1px solid palevioletred; */
     /* height: 40rem; */
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 1000;
 }
 .main-content{
     width: 100%;
-    border: 1px solid orangered;
+    /* border: 1px solid orangered; */
     /* height: 40rem; */
 }
 .logo-and-subscribe{
@@ -222,11 +225,13 @@ a{
 }
 .nav-menu{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-top: 6rem;
+    /* border: 1px solid orangered; */
 }
 .nav-link{
     width: 100%;
@@ -249,7 +254,7 @@ a{
 .subscribe-section{
     width: 86%;
     margin: 1rem auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     margin-left: 9%;
@@ -257,19 +262,19 @@ a{
 }
 .sub-img{
     width: 49%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .sub-img img{
     width: 100%;
 }
 .subscribe-wrapper{
     width: 49%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     padding: 3rem 0;
 }
 .subscribe-header{
     width: 100%;
-    border: 1px solid violet;
+    /* border: 1px solid violet; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -314,39 +319,39 @@ a{
     color: white;
     letter-spacing: .04rem;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 .banner{
     width: 100%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     margin: 2rem 0;
     object-fit: cover;
-    height: 100vh;
-
-    
+    /* height: 114vh; */
+   
 }
 .media-content{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6rem 10rem 0 12rem;
+    padding: 3rem 10rem 0 12rem;
     position: absolute;
-    margin-top: -60rem;
+    margin-top: -55rem;
+    /* border: 1px solid white; */
 }
 .media-content-left{
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 
 }
 .media-content-right{
-    width: 47%;
+    width: 45%;
     display: flex;
     justify-content: end;
     flex-direction: column;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 
 }
 .media-content-left-head{
@@ -356,6 +361,10 @@ a{
 .media-img{
     width: 100%;
     margin-bottom: 1.3rem;
+    /* border: 1px solid white; */
+}
+.media-img img{
+    width: 70%;
 }
 .media-desc-wrapper{
     width: 100%;
@@ -392,13 +401,18 @@ a{
 }
 .h-watch-now-btn{
     width: 75%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: hsla(0,0%,100%,.08);
     border: none;
     border-radius: .7rem;
+    cursor: pointer;
+}
+.h-watch-now-btn:hover{
+    background-color: rgba(247, 231, 231, 0.344);
+   
 }
 .h-watch-now-btn i{
     font-size: 1.5rem;
@@ -413,17 +427,22 @@ a{
 }
 .h-add-wishlist{
     width: 15%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     text-align: center;
     background-color: hsla(0,0%,100%,.08);
     border: none;
     border-radius: .7rem;
+    cursor: pointer;
+}
+.h-add-wishlist:hover{
+    background-color: rgba(247, 231, 231, 0.344);
+   
 }
 .h-add-wishlist i{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: white;
     margin: 1.2rem;
-    font-weight: 600;
+    font-weight: bold;
 }
 .media-gener{
     width: 100%;
@@ -447,6 +466,7 @@ a{
     width: 100%;
     margin: 2rem 0;
     text-align: right;
+    cursor: pointer;
 }
 .h-mute i{
     font-size: 2.5rem;
@@ -463,7 +483,7 @@ a{
     width: 5%;
     padding: 1.6rem;
     text-align: center;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .b-slide-move-icon i{
     font-size: 1.5rem;
@@ -471,7 +491,7 @@ a{
 }
 .banner-slide{
     width: 16%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .banner-slide img{
     width: 100%;
@@ -484,7 +504,7 @@ a{
     margin: 1rem auto;
     /* border: 1px solid black; */
     margin-left: 9%;
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 }
 .latest-and-trending{
     width: 100%;
@@ -494,6 +514,22 @@ a{
     position: relative;
     height: 28rem;
     margin: 1rem 0 2rem;
+}
+
+.banner-slides-wrapper .category{
+    height: 5rem;
+    margin-bottom: 0;
+    
+}
+.banner-slides-wrapper .slide-container{
+    height: 5rem;
+    margin-bottom: 0;
+}
+.banner-slides-wrapper .slide{
+    height: 5rem;
+    width: 9rem;
+    min-width: 9rem;
+    margin-bottom: 0;
 }
 .category-title{
     width: 100%;
@@ -643,6 +679,18 @@ a{
 .next-btn:hover i {
     opacity: 1;
 }
+
+/* .banner-slides-wrapper .back-btn i,
+.next-btn i{
+    height: 1rem;
+    margin-top: 50%;
+}
+.banner-slides-wrapper .back-btn ,
+.next-btn {
+    height: 1rem;
+    background: none;
+
+} */
 .popular-shows{
     width: 100%;
 }
@@ -668,7 +716,37 @@ a{
 .popular-gener .slide img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+.trailors-and-more{
+    width: 100%;
+}
+.trailors-and-more .category{
+    height: 22rem;
+}
+.trailors-and-more .slide-container{
+    height:22rem;
+}.trailors-and-more .slide{
+    min-width: 20%;
+    width: 20%;
+    height: 15rem;
+}
+.trailor-and-more-img{
+    width: 100%;
+}
+.trailor-and-more-img img{
+    width: 100%;
+}
+.more-like-this{
+    width: 100%;
+}
+.more-like-this .category-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}.more-like-this .category-title h3{
+    margin-right: 3rem;
+    cursor: pointer;
 }
 .popular-languages{
     width: 100%;
@@ -689,7 +767,7 @@ a{
 .popular-languages .slide img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -728,14 +806,14 @@ a{
 
 .footer-menus-lang>a {
     color: #8F98B2;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize;
 }
 
 .footer-link-head {
     color: white;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-weight: 700;
     text-transform: capitalize;
     margin-bottom: 1rem;
@@ -748,7 +826,7 @@ a{
 
 .company-links>a {
     color: #8F98B2;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize;
     margin-bottom: .6rem;
@@ -762,7 +840,7 @@ a{
 
 .h-help>a {
     color: #8F98B2;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize;
     margin-bottom: .6rem;
@@ -778,7 +856,7 @@ a{
 
 .footer-icons>a {
     color: white;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
 }
 
 .second-footer {
@@ -796,6 +874,7 @@ a{
     flex-direction: column;
 }
 
+
 .app-images-container {
     width: 35%;
     /* border: .1rem solid blue; */
@@ -806,7 +885,7 @@ a{
 
 .t-conditions>span {
     color: #8F98B2;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize;
     margin-bottom: .6rem;
@@ -814,7 +893,7 @@ a{
 
 .t-conditions>span>a {
     color: #8F98B2;
-    font-size: 1.4rem;
+    font-size: 2rem;
     text-decoration: none;
     text-transform: capitalize;
     margin-bottom: .6rem;
@@ -837,9 +916,27 @@ a{
     width: 100%;
     height: 100%;
 }
+.media-name{
+    width: 100%;
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.single-product-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f1014;
 
-
-
+}
+.single-product-container .banner{
+    width: 100%;
+    /* border: 1px solid white; */
+    margin: 0 0 4rem 0;
+    object-fit: cover;
+    /* height: 114vh; */
+   
+}
 
 
 
