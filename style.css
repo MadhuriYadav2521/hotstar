@@ -942,6 +942,15 @@ a{
 
 
 
+/* ----------cart-container-------- */
+
+.cart-container{
+    width: 100%;
+    background-color: #0f1014;
+    border: 1px solid transparent;
+}
+
+
 
 
 
