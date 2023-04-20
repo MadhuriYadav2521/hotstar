@@ -28,11 +28,11 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                     <div class="login-title">Login </div>
-                    <form onsubmit="register(event)" method="post" action="index.html">
+                    <form onsubmit="login(event)" method="post" action="index.html">
 
                         <div class="login-inputs">
                             <div class="input-block">
-                                <input type="text" name="input-text" id="userEmail" required spellcheck="false">
+                                <input type="text" name="input-text" id="userEmail" required spellcheck="false" autocomplete="off">
                                 <span class="placeholder">
                                     Enter Username
                                 </span>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="login-inputs">
                             <div class="input-block">
-                                <input type="password" name="input-password" id="userPassword" required
+                                <input type="password" name="input-password" id="userPassword" required autocomplete="off"
                                     spellcheck="false">
                                 <span class="placeholder">
                                     Enter Password
@@ -61,6 +61,7 @@
         </div>
 
     </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>
