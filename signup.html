@@ -28,55 +28,67 @@
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                     <div class="login-title"> Sign Up </div>
-                    <div class="login-inputs">
-                        <div class="input-block">
-                            <input type="text" name="input-text" id="input-text" required spellcheck="false">
-                            <span class="placeholder">
-                            Username
-                            </span>
+
+                    <form action="login.html" onsubmit="register(event)" method="post">
+                        <div class="login-inputs">
+                            <div class="input-block">
+                                <input type="text" name="input-text" id="userName" required spellcheck="false">
+                                <span class="placeholder">
+                                    Username
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="login-inputs">
-                        <div class="input-block">
-                            <input type="email" name="input-password" id="email" required
-                                spellcheck="false">
-                            <span class="placeholder">
-                                 Email
-                            </span>
+                        <div class="login-inputs">
+                            <div class="input-block">
+                                <input type="email" name="input-password" id="userEmail" required spellcheck="false">
+                                <span class="placeholder">
+                                    Email
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
 
-                    <div class="login-inputs">
-                        <div class="input-block">
-                            <input type="password" name="input-password" id="input-password" required
-                                spellcheck="false">
-                            <span class="placeholder">
-                                Password
-                            </span>
+                        <div class="login-inputs">
+                            <div class="input-block">
+                                <input type="password" name="input-password" id="userPassword" required
+                                    spellcheck="false">
+                                <span class="placeholder">
+                                    Password
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="login-inputs">
-                        <div class="input-block">
-                            <input type="password" name="input-password" id="input-password" required
-                                spellcheck="false">
-                            <span class="placeholder">
-                                Confirm Password
-                            </span>
+                        <div class="login-inputs">
+                            <div class="input-block">
+                                <input type="password" name="input-password" id="userConfirmPassword" required
+                                    spellcheck="false">
+                                <span class="placeholder">
+                                    Confirm Password
+                                </span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="login-submit">
-                        <input type="submit" name="submit" id="submit" value="Sign Up">
+                        <div class="login-submit">
+                            <input type="submit" name="submit" id="submit" value="Sign Up">
 
-                    </div>
-                    <div class="login-footer">
-                        <p>Having trouble logging in? <span class="get-help">get help</span></p>
-                    </div>
+                        </div>
+                        <div class="login-footer">
+                            <p>Having trouble logging in? <span class="get-help">get help</span></p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
