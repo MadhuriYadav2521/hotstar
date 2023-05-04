@@ -74,17 +74,21 @@ function login(event){
     event.preventDefault();
     var email = document.getElementById("userEmail").value
     var password = document.getElementById("userPassword").value
+    var currentUser;
     if(email && password){
         var flag = false;
         var  LS = JSON.parse(localStorage.getItem("hotstarUsers"));
         for(var i =0; i<LS.length; i++){
             if(LS[i].useremail == email && LS[i].password == password ){
                 flag= true;
+                currentUser = LS[i];
+
             }
         }
         if(flag == true){
+            localStorage.setItem("hotstarCurrentUser", JSON.stringify(currentUser))
             alert("login successful")
-            window.location.href="./index.html";
+            window.location.href="./home.html";
         }else{
             alert("credentials not matched")
         }
@@ -94,6 +98,24 @@ function login(event){
    
 }
 
+
+
+function addProduct(event) {
+    event.preventDefault();
+    // alert("Product adding....")
+    // var proName = document.getElementById("pname").value;
+    // var proPrice = document.getElementById("pprice").value;
+    var proImage = document.getElementById("pimage").value;
+    var product = {  proImage };
+
+    var LS = JSON.parse(localStorage.getItem("hotstarProducts")) || [];
+    LS.push(product);
+    localStorage.setItem("hotstarProducts", JSON.stringify(LS));
+
+    alert("Product Added Successfully.")
+  
+    document.getElementById("pimage").value = "";
+}
 
 
 
