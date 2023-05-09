@@ -99,7 +99,6 @@ function login(event){
 }
 
 
-
 function addProduct(event) {
     event.preventDefault();
     // alert("Product adding....")

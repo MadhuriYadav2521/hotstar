@@ -1647,7 +1647,7 @@
 
             var productsFromLS = JSON.parse(localStorage.getItem("hotstarProducts"))
             for (var i = 0; i < productsFromLS.length; i++) {
-                finalData += `<div id='singlePro' href="./singleProduct.html">
+                finalData += `<div id='singlePro'  onclick='redirect(${JSON.stringify(productsFromLS[i])})'>
                             <img src=${productsFromLS[i].proImage} />
                             </div>`;
             }
@@ -1657,6 +1657,13 @@
             divToShowProducts.innerHTML = finalData;
 
 
+        }
+        function redirect(product) {
+            var singleProduct = JSON.stringify(product);
+            // console.log(s, " s here")
+            // alert("Working")
+            localStorage.setItem("hotstar-current-product", singleProduct);
+            window.location.href = './product-details.html'
         }
         
         function logout() {
