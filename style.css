@@ -181,7 +181,7 @@ a{
 
 }
 .nav-wrapper{
-    width: 9%;
+    width: 14%;
     height: 80%;
     /* border: 1px solid palevioletred; */
     /* height: 40rem; */
@@ -200,8 +200,8 @@ a{
     /* height: 40rem; */
 }
 .logo-and-subscribe{
-    width: 80%;
-    margin:  1.5rem auto;
+    width: 40%;
+    margin:  1.5rem ;
     /* border: 1px solid salmon; */
 }
 .logo{
@@ -249,16 +249,45 @@ a{
     text-align: center;
     /* border: 1px solid salmon; */
     margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.nav-link:hover{
+    /* background-color: #252833; */
+    transition: all 0.5s ease-out;
 }
 .nav-link i{
     color: gray;
     font-size: 1.7rem;
-    
+    width: 20%;
+    /* border: 1px solid salmon; */
 }
 .nav-link:hover i{
     color: white;
     
+}
+.nav-link span{
+    width: 50%;
+    color: gray;
+    font-size: 1.7rem;
+    opacity: 0;
+    text-transform: capitalize;
+    /* border: 1px solid salmon; */
+
+}
+/* .nav-menu:hover{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+} */
+.nav-menu:hover span{
+    opacity: 1;
+    transition: .5s;
+}
+.nav-link:hover span{
+    color: white;
+    /* opacity: 1; */
+
 }
 .subscribe-section{
     width: 86%;
@@ -344,7 +373,7 @@ a{
     justify-content: space-between;
     padding: 3rem 10rem 0 12rem;
     position: absolute;
-    margin-top: -55rem;
+    margin-top: -50rem;
     /* border: 1px solid white; */
 }
 .media-content-left{
@@ -393,12 +422,12 @@ a{
 }
 .m-d-content p{
     font-size: 1.6rem;
-    color: white;
+    color: black;
     line-height: 2.3rem;
     font-weight: 600;
 }
 .m-d-w-head span{
-    color:  #FFFFFFD6;
+    color:  black;
     font-size: 1.6rem;
     padding: .5rem 1rem .5rem 0;
     font-weight: 550;
@@ -425,14 +454,14 @@ a{
 }
 .h-watch-now-btn i{
     font-size: 1.5rem;
-    color: white;
+    color: black;
 }
 .h-watch-now-btn span{
     font-size: 1.6rem;
     margin: 1.2rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: white;
+    color: black;
 }
 .h-add-wishlist{
     width: 15%;
@@ -449,7 +478,7 @@ a{
 }
 .h-add-wishlist i{
     font-size: 1.8rem;
-    color: white;
+    color: black;
     margin: 1.2rem;
     font-weight: bold;
 }
@@ -460,7 +489,7 @@ a{
     margin-bottom: 1.3rem;
 }
 .media-gener span{
-    color: #FFFFFFD6;
+    color: black;
     font-size: 1.6rem;
     padding: .5rem 1rem .5rem 0;
     font-weight: 550;
@@ -479,7 +508,7 @@ a{
 }
 .h-mute i{
     font-size: 2.5rem;
-    color: white;
+    color: black;
 }
 .banner-slides-wrapper{
     width: 100%;
@@ -1171,7 +1200,15 @@ a{
     
 }
 
-
+#singlePro{
+    width: 100%;
+    height: 80vh;
+}
+#singlePro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
 
 
 

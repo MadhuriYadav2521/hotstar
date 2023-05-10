@@ -29,23 +29,32 @@
                     </div>
                 </div>
                 <div class="nav-menu">
-                    <a class="nav-link">
+                    <a class="nav-link" href="./signup.html">
                         <i class="fa-regular fa-user"></i>
+                        <span id="switch">my space</span>
                     </a>
                     <a class="nav-link">
                         <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>search</span>
                     </a>
                     <a class="nav-link">
                         <i class="fa-solid fa-house"></i>
+                        <span>home</span>
                     </a>
                     <a class="nav-link">
                         <i class="fa-solid fa-tv"></i>
+                        <span>TV</span>
                     </a>
                     <a class="nav-link">
                         <i class="fa-solid fa-film"></i>
+                        <span>movies</span>
                     </a>
                     <a class="nav-link">
                         <i class="fa-solid fa-baseball"></i>
+                        <span>sports</span>
+                    </a>
+                    <a class="nav-link" id="logout">
+                       
                     </a>
                 </div>
             </div>
@@ -56,10 +65,10 @@
                     <div class="media-content">
                         <div class="media-content-left">
                             <div class="media-content-left-head">
-                                <div class="media-img"  id="singleProductName">
-                                    <!-- <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/5138/1405138-t-8c5c2a22ee5d"
-                                        alt=""> -->
-                                </div>
+                                <!-- <div class="media-img">
+                                    <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/5138/1405138-t-8c5c2a22ee5d"
+                                        alt="">
+                                </div> -->
                                 <div class="media-desc-wrapper">
                                     <div class="m-d-w-head">
                                         <span>2021</span>
@@ -87,9 +96,9 @@
                                 </div>
                             </div>
                             <div class="h-watch-now-add-wrapper">
-                                <a href="./cart.html" class="h-watch-now-btn">
+                                <a class="h-watch-now-btn"id="forAddToCart">
                                     <span><i class="fa-solid fa-play"></i></span>
-                                    <span id="forAddToCart"></span>
+                                    <span ></span>
                                 </a>
                                 <div class="h-add-wishlist">
                                     <i class="fa-solid fa-plus"></i>
@@ -104,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="category-section">
+                 <div class="category-section">
                     <div class="more-like-this ">
                         <div class="category-title">
                             <h3>more like this</h3>
@@ -351,7 +360,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="footer">
 
@@ -432,7 +441,7 @@
                 // var h1 = document.createElement("h1");
                 // h1.innerText = "madhuri"
                 // divFromHtml.append(h1)
-                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <button onclick="logout() ">Logout</button>'
+                var button = '<i class="fa-solid fa-arrow-right-from-bracket"></i> <span onclick="logout() ">Logout</span>'
                 var name = `<p> ${currentUser.namee}</p>`;
                 divFromHtml.innerHTML = name;
                 logoutDiv.innerHTML = button;
@@ -445,27 +454,82 @@
             var product = JSON.parse(localStorage.getItem("hotstar-current-product"));
 
             var divToAppendProduct = document.getElementById("singleProduct");
-            var divToAppendProductName = document.getElementById("singleProductName");
-            var divToAppendProductPrice = document.getElementById("total-price");
+            // var divToAppendProductName = document.getElementById("singleProductName");
+            // var divToAppendProductPrice = document.getElementById("total-price");
             var divForAddToCart = document.getElementById("forAddToCart");
 
 
-            var structure = `<div id='singlePro'> <img src='${product.proImage}' class="got-image" />
-                          </div>`
+            // var structure = `<div id='singlePro'> <img src='${product.proImage}' class="got-image" />
+            //               </div>`
 
-            var productName = `<div> ${product.proName}</div>`
-            var productPrice = `<span> ${product.proPrice}</span>`
-            var addToCart = `<button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button>`
+            // var productName = `<div> ${product.proName}</div>`
+            // var productPrice = `<span> ${product.proPrice}</span>`
+            // var addToCart = `<span><i class="fa-solid fa-play"></i></span>
+            //     <span ><button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button></span>`
+
+                var addToCart ="";
+
+                var structure = ` <div class="banner" id="singleProduct">
+                <div id='singlePro'> <img src='${product.proImage}' class="got-image" />
+                           </div>
+                    <div class="media-content">
+                        <div class="media-content-left">
+                            <div class="media-content-left-head">
+                               
+                                <div class="media-desc-wrapper">
+                                    <div class="m-d-w-head">
+                                        <span>2021</span>
+                                        <span>.</span>
+                                        <span>2 Seasons</span>
+                                        <span>.</span>
+                                        <span>Hindi</span>
+                                        <span>.</span>
+                                        <span>U/A7+</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="media-gener">
+                                    <span>Mythology</span>
+                                    <span>|</span>
+                                    <span>Animation</span>
+                                    <span>|</span>
+                                    <span>Creatures & Monsters</span>
+                                    <span>|</span>
+                                    <span>Fantacy</span>
+                                </div>
+                            </div>
+                            <div class="h-watch-now-add-wrapper">
+                                <a class="h-watch-now-btn"id="forAddToCart">
+                                    <span><i class="fa-solid fa-play"></i></span>
+                                    <span onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</span>
+                                </a>
+                                <div class="h-add-wishlist">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media-content-right">
+                            <div class="h-mute">
+                                <i class="fa-solid fa-volume-low"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>`
                         
 
             console.log(structure, "here");
             divToAppendProduct.innerHTML = structure;
-            divToAppendProductName.innerHTML = productName;
-            divToAppendProductPrice.innerHTML = productPrice;
+            // divToAppendProductName.innerHTML = productName;
+            // divToAppendProductPrice.innerHTML = productPrice;
             divForAddToCart.innerHTML = addToCart;
 
 
-            function addCart(product) {
+           
+
+        }
+
+        function addCart(product) {
                 // alert("Adding to cart")
                 var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
                 // console.log(currentUser.email);
@@ -480,13 +544,12 @@
                             userData[i].cartProducts.push(product)
                         }
                         alert("Product added to cart.")
-                        window.location.href = './cart-2.html'
+                        window.location.href = './dynamic-cart.html'
                     }
                 }
                 localStorage.setItem("hotstarUsers", JSON.stringify(userData))
             }
 
-        }
         function logout() {
             alert("We will miss you..")
             localStorage.removeItem("hotstarCurrentUser");
