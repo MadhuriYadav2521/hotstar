@@ -66,8 +66,7 @@
                         <div class="media-content-left">
                             <div class="media-content-left-head">
                                 <div class="media-img">
-                                    <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/5138/1405138-t-8c5c2a22ee5d"
-                                        alt="">
+                                    
                                 </div>
                                 <div class="media-desc-wrapper">
                                     <div class="m-d-w-head">
@@ -481,14 +480,14 @@
                                     <div class="m-d-w-head">
                                         <span>${product.proGenre}</span>
                                         <span>.</span>
-                                        <span>${product.proPrice}</span>
+                                        <span>₹ ${product.proPrice}</span>
                                         <span>.</span>
                                         <span>Hindi</span>
                                         <span>.</span>
                                         <span>U/A7+</span>
                                     </div>
                                     <div class="m-d-content">
-                                        <p${product.proDesc}</p>
+                                        <p>${product.proDesc}</p>
                                     </div>
                                 </div>
                                 
@@ -496,7 +495,7 @@
                             <div class="h-watch-now-add-wrapper">
                                 <a class="h-watch-now-btn"id="forAddToCart">
                                     <span><i class="fa-solid fa-play"></i></span>
-                                    <span ></span>
+                                    <span onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</span>
                                 </a>
                                 <div class="h-add-wishlist">
                                     <i class="fa-solid fa-plus"></i>
