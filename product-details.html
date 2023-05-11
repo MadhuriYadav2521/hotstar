@@ -527,6 +527,7 @@
             var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
             // console.log(currentUser.email);
             var userData = JSON.parse(localStorage.getItem("hotstarUsers"))
+           if(currentUser){
             var flafForUser = false;
             for (var i = 0; i < userData.length; i++) {
                 if (currentUser.useremail === userData[i].useremail) {
@@ -541,6 +542,10 @@
                 }
             }
             localStorage.setItem("hotstarUsers", JSON.stringify(userData))
+           }else{
+            alert("login first");
+            window.location.href="./signup.html";
+           }
         }
 
         function logout() {

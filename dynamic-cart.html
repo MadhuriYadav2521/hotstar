@@ -54,7 +54,7 @@
                         <span>sports</span>
                     </a>
                     <a class="nav-link" id="logout">
-                       
+
                     </a>
                 </div>
             </div>
@@ -68,9 +68,9 @@
                                     <!-- <img src="https://img1.hotstarext.com/image/upload/f_auto,q_90,w_256/sources/r1/cms/prod/old_images/vertical/MOVIE/3314/1770003314/1770003314-v" alt=""> -->
                                 </div>
                                 <div class="cart-product-info">
-                                    <div class="product-name">m. s. dhoni - the untold story</div>
+                                    <div class="product-name"></div>
                                     <div class="price-section">
-                                        <span class="price">₹ 500</span>
+                                        <span class="price"></span>
                                         <span class="del-price"><del>₹ 999</del> </span>
                                         <div class="off-amt">49% off</div>
                                     </div>
@@ -91,21 +91,21 @@
                             <div class="price-details-title">price details</div>
                             <div class="price-deatails-content">
                                 <div class="p-qty">
-                                    <p>price(3 items)</p>
-                                    <p>₹ 3,390</p>
+                                    <p>price(<span id="count"></span> items)</p>
+                                    <p id="totalPrice"></p>
                                 </div>
                                 <div class="c-discount">
                                     <p>discount</p>
-                                    <p>-₹ 1,648</p>
+                                    <p>-₹ 200</p>
                                 </div>
                                 <div class="c-total-amt">
                                     <p>total Amount</p>
-                                    <p>₹ 1,759</p>
+                                    <p id="finalPrice"></p>
                                 </div>
                                 <button onclick="window.location.href='./index.html'">buy now</button>
                             </div>
                             <div class="price-d-footer">
-                                You will save ₹684 on this order
+                                You will save ₹ 200 on this order
                             </div>
                         </div>
                     </div>
@@ -183,7 +183,7 @@
 
 
     <script>
-        window.onload = function(){
+        window.onload = function () {
             // alert("working")
             var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
             // console.log(currentUser,"currentUser");
@@ -209,6 +209,9 @@
             // var divToAppendProductName = document.getElementById("productName")
             // var divToAppendProductPrice = document.getElementById("productPrice")
             var divToAppendAllProducts = document.getElementById("finalcart")
+            var divToShowCount = document.getElementById("count");
+            var divToShowTotalPrice = document.getElementById("totalPrice");
+            var divToShowFinalPrice = document.getElementById("finalPrice");
 
             var products;
             for (var i = 0; i < userData.length; i++) {
@@ -216,31 +219,33 @@
                     products = userData[i].cartProducts;
                 }
             }
-            console.log(products,"products here");
+            console.log(products, "products here");
             // var finalData = "";
 
             var finalProductImage = "";
             // var finalProductName = "";
             // var finalProductPrice = "";
-            var finalProductCart  = "";
-
+            var finalProductCart = "";
+            var count = 0;
+            var sumArray = [];
             for (var i = 0; i < products.length; i++) {
 
                 // finalData += `<div> <img src='${products[i].proImage}'/><br/>
                 //             <h2>${products[i].proName}</h2><br/>
                 //             <h3>${products[i].proPrice}</h3>`
 
-                    // finalProductImage += `<div> <img src='${products[i].proImage}'/></div>`;
-                    // finalProductName += `${products[i].proName}`;
-                    // finalProductPrice += `₹${products[i].proPrice}`;
+                // finalProductImage += `<div> <img src='${products[i].proImage}'/></div>`;
+                // finalProductName += `${products[i].proName}`;
+                // finalProductPrice += `₹${products[i].proPrice}`;
 
-                    finalProductCart += `<div class="cart-product">
+                finalProductCart += `<div class="cart-product">
                                 <div class="cart-product-img" id="productImage">
                                     <img src='${products[i].proImage}'/> </div>
                                 <div class="cart-product-info">
-                                    <div class="product-name">m. s. dhoni - the untold story</div>
+                                    <div class="product-name">${products[i].proName}</div>
+                                    <div class="price">${products[i].proGenre}</div><br/>
                                     <div class="price-section">
-                                        <span class="price">₹ 500</span>
+                                        <span class="price">₹ ${products[i].proPrice}</span>
                                         <span class="del-price"><del>₹ 999</del> </span>
                                         <div class="off-amt">49% off</div>
                                     </div>
@@ -256,21 +261,39 @@
                                     </div>
                                 </div>
                             </div> `
-
+                            
+                            count++
+                            sumArray.push(products[i].proPrice)
+                            
             }
+            
+            var sum = 0;
+            console.log(count);
+            console.log(sumArray);
+            for(var i=0; i<sumArray.length; i++){
+                sum = sum + parseInt(sumArray[i])
+                
+            }
+            console.log(sum);
+            var finalPrice = sum - 200;
+            console.log(finalPrice);
             // divToAppendProducts.innerHTML = finalData;
 
             divToAppendProductImage.innerHTML = finalProductImage;
             // divToAppendProductName.innerHTML = finalProductName;
             // divToAppendProductPrice.innerHTML = finalProductPrice;
             divToAppendAllProducts.innerHTML = finalProductCart;
+            divToShowCount.innerHTML = count;
+            divToShowTotalPrice.innerHTML =` ₹ ${sum}`
+            divToShowFinalPrice.innerHTML = ` ₹ ${finalPrice}`
+            
         }
         function logout() {
             alert("We will miss you..")
             localStorage.removeItem("hotstarCurrentUser");
             window.location.reload();
         }
-        
+
     </script>
 
 
