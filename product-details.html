@@ -54,21 +54,21 @@
                         <span>sports</span>
                     </a>
                     <a class="nav-link" id="logout">
-                       
+
                     </a>
                 </div>
             </div>
             <div class="main-content">
 
                 <div class="banner" id="singleProduct">
-                    
+
                     <div class="media-content">
                         <div class="media-content-left">
                             <div class="media-content-left-head">
-                                <!-- <div class="media-img">
+                                <div class="media-img">
                                     <img src="https://img1.hotstarext.com/image/upload/f_auto,h_136/sources/r1/cms/prod/5138/1405138-t-8c5c2a22ee5d"
                                         alt="">
-                                </div> -->
+                                </div>
                                 <div class="media-desc-wrapper">
                                     <div class="m-d-w-head">
                                         <span>2021</span>
@@ -79,11 +79,11 @@
                                         <span>.</span>
                                         <span>U/A7+</span>
                                     </div>
-                                    <!-- <div class="m-d-content">
+                                    <div class="m-d-content">
                                         <p>Hanuman has realised his limitless powers, and now he must journey alone to
                                             Lanka to face the might of the demon king Ravan, his fierce sons and his
                                             armies.</p>
-                                    </div> -->
+                                    </div>
                                 </div>
                                 <div class="media-gener">
                                     <span>Mythology</span>
@@ -96,9 +96,9 @@
                                 </div>
                             </div>
                             <div class="h-watch-now-add-wrapper">
-                                <a class="h-watch-now-btn"id="forAddToCart">
+                                <a class="h-watch-now-btn" id="forAddToCart">
                                     <span><i class="fa-solid fa-play"></i></span>
-                                    <span ></span>
+                                    <span></span>
                                 </a>
                                 <div class="h-add-wishlist">
                                     <i class="fa-solid fa-plus"></i>
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                 <div class="category-section">
+                <div class="category-section">
                     <div class="more-like-this ">
                         <div class="category-title">
                             <h3>more like this</h3>
@@ -467,41 +467,36 @@
             // var addToCart = `<span><i class="fa-solid fa-play"></i></span>
             //     <span ><button onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</button></span>`
 
-                var addToCart ="";
+            var addToCart = "";
 
-                var structure = ` <div class="banner" id="singleProduct">
-                <div id='singlePro'> <img src='${product.proImage}' class="got-image" />
-                           </div>
-                    <div class="media-content">
-                        <div class="media-content-left">
+            var structure = `<div id='singlePro'> <img src='${product.proImage}' class="got-image" />
+                      </div>
+             <div class="media-content">
+                                            <div class="media-content-left">
                             <div class="media-content-left-head">
-                               
+                                <div class="media-img">
+                                    ${product.proName}
+                                </div>
                                 <div class="media-desc-wrapper">
                                     <div class="m-d-w-head">
-                                        <span>2021</span>
+                                        <span>${product.proGenre}</span>
                                         <span>.</span>
-                                        <span>2 Seasons</span>
+                                        <span>${product.proPrice}</span>
                                         <span>.</span>
                                         <span>Hindi</span>
                                         <span>.</span>
                                         <span>U/A7+</span>
                                     </div>
-                                    
+                                    <div class="m-d-content">
+                                        <p${product.proDesc}</p>
+                                    </div>
                                 </div>
-                                <div class="media-gener">
-                                    <span>Mythology</span>
-                                    <span>|</span>
-                                    <span>Animation</span>
-                                    <span>|</span>
-                                    <span>Creatures & Monsters</span>
-                                    <span>|</span>
-                                    <span>Fantacy</span>
-                                </div>
+                                
                             </div>
                             <div class="h-watch-now-add-wrapper">
                                 <a class="h-watch-now-btn"id="forAddToCart">
                                     <span><i class="fa-solid fa-play"></i></span>
-                                    <span onclick='addCart(${JSON.stringify(product)})'class="sp-primary-btn">Add to cart</span>
+                                    <span ></span>
                                 </a>
                                 <div class="h-add-wishlist">
                                     <i class="fa-solid fa-plus"></i>
@@ -514,9 +509,8 @@
                             </div>
 
                         </div>
-                    </div>
-                </div>`
-                        
+                    </div>`
+
 
             console.log(structure, "here");
             divToAppendProduct.innerHTML = structure;
@@ -525,30 +519,30 @@
             divForAddToCart.innerHTML = addToCart;
 
 
-           
+
 
         }
 
         function addCart(product) {
-                // alert("Adding to cart")
-                var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
-                // console.log(currentUser.email);
-                var userData = JSON.parse(localStorage.getItem("hotstarUsers"))
-                var flafForUser = false;
-                for (var i = 0; i < userData.length; i++) {
-                    if (currentUser.useremail === userData[i].useremail) {
-                        // alert("got")
-                        if (userData[i].cartProducts == undefined) {
-                            userData[i].cartProducts = [product];
-                        } else {
-                            userData[i].cartProducts.push(product)
-                        }
-                        alert("Product added to cart.")
-                        window.location.href = './dynamic-cart.html'
+            // alert("Adding to cart")
+            var currentUser = JSON.parse(localStorage.getItem("hotstarCurrentUser"))
+            // console.log(currentUser.email);
+            var userData = JSON.parse(localStorage.getItem("hotstarUsers"))
+            var flafForUser = false;
+            for (var i = 0; i < userData.length; i++) {
+                if (currentUser.useremail === userData[i].useremail) {
+                    // alert("got")
+                    if (userData[i].cartProducts == undefined) {
+                        userData[i].cartProducts = [product];
+                    } else {
+                        userData[i].cartProducts.push(product)
                     }
+                    alert("Product added to cart.")
+                    window.location.href = './dynamic-cart.html'
                 }
-                localStorage.setItem("hotstarUsers", JSON.stringify(userData))
             }
+            localStorage.setItem("hotstarUsers", JSON.stringify(userData))
+        }
 
         function logout() {
             alert("We will miss you..")
