@@ -105,7 +105,11 @@ function addProduct(event) {
     // var proName = document.getElementById("pname").value;
     // var proPrice = document.getElementById("pprice").value;
     var proImage = document.getElementById("pimage").value;
-    var product = {  proImage };
+    var proName = document.getElementById("pname").value;
+    var proPrice = document.getElementById("pprice").value;
+    var proDesc = document.getElementById("pdesc").value;
+    var proGenre = document.getElementById("pgenre").value;
+    var product = {  proImage, proName, proPrice, proDesc, proGenre };
 
     var LS = JSON.parse(localStorage.getItem("hotstarProducts")) || [];
     LS.push(product);
@@ -114,6 +118,10 @@ function addProduct(event) {
     alert("Product Added Successfully.")
   
     document.getElementById("pimage").value = "";
+    document.getElementById("pname").value = "";
+    document.getElementById("pprice").value = "";
+    document.getElementById("pdesc").value = "";
+    document.getElementById("pgenre").value = "";
 }
 
 

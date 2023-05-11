@@ -181,11 +181,12 @@ a{
 
 }
 .nav-wrapper{
-    width: 14%;
-    height: 80%;
+    width: 13%;
+    height: 100%;
     /* border: 1px solid palevioletred; */
     /* height: 40rem; */
-    background-color: transparent;
+    /* background-color: transparent; */
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,7 +260,7 @@ a{
     transition: all 0.5s ease-out;
 }
 .nav-link i{
-    color: gray;
+    color: rgb(175, 170, 170);
     font-size: 1.7rem;
     width: 20%;
     /* border: 1px solid salmon; */
@@ -270,10 +271,13 @@ a{
 }
 .nav-link span{
     width: 50%;
-    color: gray;
+    color: rgb(175, 170, 170);
     font-size: 1.7rem;
     opacity: 0;
     text-transform: capitalize;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 1rem;
     /* border: 1px solid salmon; */
 
 }
@@ -366,6 +370,12 @@ a{
     object-fit: cover;
     /* height: 114vh; */
    
+}
+.banner video{
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+#singlePro img{
+    background: linear-gradient(to right, #0c111b42 100%, #0c111b00);
 }
 .media-content{
     width: 100%;
@@ -621,14 +631,17 @@ a{
 .slide-content{
     width: 100%;
     padding: 1rem;
+    padding-bottom: 2rem;
     position: absolute;
-    top: 0;
+    /* top: 0; */
     left: 0;
-    margin-top:  12rem;
+    /* margin-top:  10rem; */
+    bottom: 0;
     transition: .5s;
     z-index: 2;
     background: linear-gradient(to bottom, rgba(4,8,15,0), #192133 98%);
     opacity: 0;
+    
 }
 .c-watch-now-btn{
     width: 100%;
@@ -669,6 +682,9 @@ a{
     color: white;
     font-size: 1.2rem;
     line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .back-btn {
     position: absolute;
