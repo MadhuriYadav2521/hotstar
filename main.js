@@ -88,7 +88,7 @@ function login(event){
         if(flag == true){
             localStorage.setItem("hotstarCurrentUser", JSON.stringify(currentUser))
             alert("login successful")
-            window.location.href="./home.html";
+            window.location.href="./index.html";
         }else{
             alert("credentials not matched")
         }
