@@ -116,6 +116,7 @@ function addProduct(event) {
     localStorage.setItem("hotstarProducts", JSON.stringify(LS));
 
     alert("Product Added Successfully.")
+    
   
     document.getElementById("pimage").value = "";
     document.getElementById("pname").value = "";
