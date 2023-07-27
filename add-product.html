@@ -16,27 +16,71 @@
 </head>
 
 <body>
-    <div class="screen">
-        <form action="" onsubmit="addProduct(event)">
-            <h1 class="admin-panel-title">add product</h1>
-            <div class="input_wrap">
-                <input type="text" id="pimage" required  autocomplete="off"/>
-                <label>Product Image url</label><br>
-                <input type="text" id="pname" required  autocomplete="off"/>
-                <label>Product Name</label><br>
-                <input type="number" id="pprice" required  autocomplete="off"/>
-                <label>Product Price</label><br>
-                <input type="text" id="pdesc" required  autocomplete="off"/>
+    <div class="screen"  style="height:100vh; background-color: #16181f ;">
+        <form action="" onsubmit="addProduct(event)" style="width: 60%; margin: auto;">
+           
+            <div class="input_wrap" style="background: #16181f;">
+                <!-- <input type="text" id="pimage" required  autocomplete="off"/>
+                <label>Product Image url</label><br> --><br><br><br>
+                <h1 class="admin-panel-title" style="color: white;">Add Product</h1><br><br>
+
+                <div class="login-inputs">
+                    <div class="input-block">
+                        <input type="text" name="input-text" id="pimage" required spellcheck="false" autocomplete="off">
+                        <span class="placeholder">
+                            Product Image url
+                        </span>
+                    </div>
+                </div>
+                <div class="login-inputs">
+                    <div class="input-block">
+                        <input type="text" name="input-text" id="pname" required spellcheck="false" autocomplete="off">
+                        <span class="placeholder">
+                            Product Name
+                        </span>
+                    </div>
+                </div>
+                <div class="login-inputs">
+                    <div class="input-block">
+                        <input type="text" name="input-text" id="pprice" required spellcheck="false" autocomplete="off">
+                        <span class="placeholder">
+                            Product Price
+                        </span>
+                    </div>
+                </div>
+                <div class="login-inputs">
+                    <div class="input-block">
+                        <input type="text" name="input-text" id="pdesc" required spellcheck="false" autocomplete="off">
+                        <span class="placeholder">
+                            Product Desc
+                        </span>
+                    </div>
+                </div>
+                <div class="login-inputs">
+                    <div class="input-block">
+                        <input type="text" name="input-text" id="pgenre" required spellcheck="false" autocomplete="off">
+                        <span class="placeholder">
+                            Product Genre
+                        </span>
+                    </div>
+                </div>
+
+                <!-- <input type="text" id="pname" required  autocomplete="off"/>
+                <label>Product Name</label><br> -->
+                <!-- <input type="number" id="pprice" required  autocomplete="off"/>
+                <label>Product Price</label><br> -->
+                <!-- <input type="text" id="pdesc" required  autocomplete="off"/>
                 <label>Product Desc</label><br>
                 <input type="text" id="pgenre" required  autocomplete="off"/>
-                <label>Product Genre</label><br>
+                <label>Product Genre</label><br> -->
+                <div class="submit-field login-submit">
+                    <input type="submit" value="Add Product" class="admin-panel-btn">
+                   </div>
             </div>
 
-           <div class="submit-field">
-            <input type="submit" value="Add Product" class="admin-panel-btn">
-           </div>
+           
                 
-            </div>
+            <!-- </div> -->
         
         </form>
 
